@@ -1,8 +1,10 @@
 console.log("JS OK")
 
+// ******* Variabili di base ************
+
 // ! recupero elemento
 
-const element = document.getElementById("final-price");
+const totalElement = document.getElementById("final-price");
 
 // ! variabile costo per km
 
@@ -14,4 +16,22 @@ const priceMessage = "Il costo del tuo biglietto è: €";
 
 // ! eventuale sconto
 
-let sconto = null;
+let discount = null;
+
+// ********* creiamo la logica dell'esercizio ***********
+
+// ! chiedo età e km da percorrere all'utente
+
+const age = parseInt(prompt(" quanti anni hai?", 30))
+const km = parseInt(prompt("Quanti km devi percorrere?", 300))
+
+// ! Calcolo del prezzo biglietto
+
+const standardPrice = km * priceKm;
+let finalPrice = standardPrice
+
+// ! stampo in pagina il prezzo del biglietto
+
+totalElement.innerText = priceMessage + finalPrice.toFixed(2)
+
+
