@@ -61,6 +61,6 @@ if(isNaN(age) || isNaN(km) || age <= 0 || km <= 0)  {
 
     totalElement.innerText = priceMessage + finalPrice.toFixed(2)
 
-    if(discount) totalElement.innerHTML += `<small><del> €${standardPrice.toFixed(2)}</small></del>`;
+    if(discount) totalElement.innerHTML += ` <small><del>€${standardPrice.toFixed(2)}</del></small>`;
 }
 
